@@ -1,0 +1,30 @@
+{
+  "name": "farmerscoop",
+  "version": "1.0.0",
+  "description": "A shooping cart for fresh produce directly from farms across Nigeria. Produce are delivered to customers' houses by a network of trusted and vetted delivery agents",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "shopping",
+    "nodejs",
+    "fresh",
+    "produce",
+    "friuts",
+    "farmers",
+    "cooperative"
+  ],
+  "author": "Everistus Olumese <everistusolumese@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.13",
+    "nodemailer": "^4.6.4",
+    "path": "^0.12.7",
+    "socket.io": "^2.1.0"
+  }
+}
