@@ -1,0 +1,11 @@
+.footer{
+    
+    width: 30%;
+    margin: 0 auto;
+    color: white;
+    margin-top: 5rem;
+    font-size: 120%;
+    text-shadow: rgb(121, 12, 4) 1px 1px 1rem;
+    text-align: center;
+    font-weight: 600;
+}
