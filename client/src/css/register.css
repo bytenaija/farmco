@@ -1,0 +1,20 @@
+body{
+    background: url("../img/beach1.jpeg") no-repeat center center;
+    background-attachment: fixed;
+    background-size:cover;
+}
+
+.register{
+    margin-top: 5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: blue 2px 2px 2rem;
+    padding:3rem;
+    background: white
+}
+
+
+.input{
+    width: 80% !important;
+    margin: 1rem auto
+}

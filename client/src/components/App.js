@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Nav from "./nav";
+import Nav from "./Nav";
+import Category from "./Categories"
 
 class App extends Component {
   render() {
@@ -7,7 +8,8 @@ class App extends Component {
       <div>
         <Nav  />
       <div className="container-fluid">
-        <h2> Farmers' Coop</h2>
+      
+        
       </div>
       </div>
     );
