@@ -51,11 +51,29 @@ let jwt = require("jsonwebtoken");
                 })            
                 .catch(err=> {
                     console.log(err)
-                    res.status(200).json({
-                        success: false,
-                        message: 'An error occured',
-                        err
-                    });
+                    if(err.errmsg.indexOf("E11000 duplicate key error index: farmco.users.$username_") != -1)
+                    {
+                        res.status(200).json({
+                            success: false,
+                            message: 'Username already taken. Kindly select another one',
+                            err: err.errmsg
+                        });
+                    } 
+                    else if(err.errmsg.indexOf("E11000 duplicate key error index: farmco.users.$email") != -1)
+                    {
+                        res.status(200).json({
+                            success: false,
+                            message: 'Email address already taken',
+                            err: err.errmsg
+                        });
+                    }else{
+                        res.status(200).json({
+                            success: false,
+                            message: 'An error occured',
+        
+                        });
+                    }
+                    
                   });
             
         

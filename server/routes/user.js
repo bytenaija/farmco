@@ -5,10 +5,10 @@ const passport = require('passport');
 
 router.post("/login", user.login);
 
-router.get("/profile:userId", passport.authenticate('jwt', {session: false}), user.profile)
+//router.get("/profile:userId", passport.authenticate('jwt', {session: false}), user.profile)
 
 router.post("/register", user.register);
 
-router.put("/profile/:userId", user.editProfile);
+//router.put("/profile/:userId", user.editProfile);
 
 module.exports = router;

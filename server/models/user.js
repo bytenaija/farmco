@@ -1,13 +1,13 @@
-import { SchemaTypes } from "mongoose";
-
 let mongoose = require("mongoose");
 let Schema = mongoose.Schema();
+let Profile = require("./profile");
+let bcrypt = require("bcrypt");
 
-let userSchema = new Schema({
-    email : {},
+let UserSchema = new mongoose.Schema({
+    email : { type: String, index: { unique: true }},
     password : {},
-    username : {},
-    profile : {Type : SchemaTypes.ObjectId, ref: Profile}
+    username : { type: String, index: { unique: true }},
+   
 
 })
 
@@ -18,7 +18,7 @@ UserSchema.pre('save', function(next) {
     if (!user.isModified('password')) return next();
 
     // generate a salt
-    bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt) {
+   let salt= bcrypt.genSalt(10, function(err, salt) {
         if (err) return next(err);
 
         // hash the password using our new salt

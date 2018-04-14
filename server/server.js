@@ -4,9 +4,12 @@ const mongoose = require("mongoose");
 const mongodb = require("./config/jwt").mongodb;
 
 let morgan = require("morgan");
+var cors = require('cors')
 
 app.use(express.json());
 require('./config/passport');
+
+app.use(cors());
 
 //support parsing of application/x-www-form-urlencoded post data
 app.use(express.urlencoded({ extended: true }));
